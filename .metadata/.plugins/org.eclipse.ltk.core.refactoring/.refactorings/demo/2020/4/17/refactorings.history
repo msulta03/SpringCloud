@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.moe.mvc1.ui.model.request.UserModel&apos; to &apos;UserRequestModel&apos;&#x0A;- Original project: &apos;demo&apos;&#x0A;- Original element: &apos;com.moe.mvc1.ui.model.request.UserModel&apos;&#x0A;- Renamed element: &apos;com.moe.mvc1.ui.model.request.UserRequestModel&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UserModel&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.moe.mvc1.ui.model.request{UserModel.java[UserModel" matchStrategy="1" name="UserRequestModel" qualified="false" references="true" similarDeclarations="false" stamp="1587454311935" textual="false" version="1.0"/>
+</session>

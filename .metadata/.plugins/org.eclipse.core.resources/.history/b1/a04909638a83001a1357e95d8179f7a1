@@ -1,0 +1,5 @@
+package com.moe.mvc1.controller;
+
+public class UserController {
+
+}

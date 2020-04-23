@@ -1,0 +1,5 @@
+package com.moe.mvc1.ui.model.request;
+
+public class UserModel {
+
+}
