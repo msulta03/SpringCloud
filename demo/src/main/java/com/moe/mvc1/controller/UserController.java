@@ -27,9 +27,15 @@ public class UserController {
 	Map <String, UserRest> users;
 	
 	@GetMapping
-	public String getUsers (@RequestParam(value = "page", defaultValue = "1") final int page,
-			@RequestParam(value = "limit") final int limit) {
-		return "get users was called with page = " + page + " and limit = " + limit;
+	public ResponseEntity<Object> Users (
+		@RequestParam(value = "page", defaultValue = "1") final int page,
+		@RequestParam(value = "limit", defaultValue = "20") final int limit) {
+
+			if (users != null){
+				return new ResponseEntity<Object>(users, HttpStatus.OK);
+			}else{
+				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+			}
 	}
 
 	@GetMapping(path = "/{userId}", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
@@ -53,7 +59,7 @@ public class UserController {
 			})
 	public ResponseEntity<UserRest> createUser (@RequestBody final UserRequestModel newUser) {
 		final UserRest confirmedUser = new UserRest();
-		String userID = UUID.randomUUID().toString();
+		final String userID = UUID.randomUUID().toString();
 
 		confirmedUser.setFirstname(newUser.getFirstname());
 		confirmedUser.setLastname(newUser.getLastname());
